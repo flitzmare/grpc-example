@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package model;
+
+option go_package = "../model";
+
+message Request {
+    int32 id = 1;
+    string name = 2;
+}
+
+message Response {
+    int32 id = 1;
+    string name = 2;
+}
+
+service Example {
+    rpc Hello(Request) returns (Response) {}
+}
+
+message User {
+    string name = 1;
+    string email = 2;
+    string address = 3;
+}
